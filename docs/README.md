@@ -46,11 +46,11 @@ Vertrek van de gegeven modeloplossing van deze oefening uit H04 en maak volgende
   - `isVolzet`:
     - maak gebruik van `some` of `every`...
 
-## 03_MapsEnSetsEasy
+## 05_MapsEnSetsEasy
 
 Oefeningen op Maps en Sets. De opgaves vind je in de `.js` file.
 
-## 04_MapsEnSets
+## 06_MapsEnSets
 
 ### a. Gesorteerde Map
 
