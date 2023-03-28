@@ -97,7 +97,18 @@ const alpha = undefined;
 console.log(alpha);
 
 // 7. Reduce Exercise
-// Sum up the instances of each of these
+// Sum up the instances of each of these. In other words, how many times does `car`,`truck`, etc. exist in the array?
+// The result should be the following:
+//const result = {
+//  bike: 2,
+//  car: 5,
+//  pogostick: 1,
+//  truck: 3,
+//  van: 2,
+//  walk: 2,
+//}
+// TIP: start with an empty object and add properties / keys to the object.
+
 const data = [
   'car',
   'car',
