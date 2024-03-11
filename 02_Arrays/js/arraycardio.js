@@ -146,7 +146,7 @@ const comments = [
 
 // 8. Some and Every Checks
 // Array.prototype.some() // is at least one person 19?
-// const isAdult = people.some(function(person) {
+// const isAdult = family.some(function(person) {
 //   const currentYear = (new Date()).getFullYear();
 //   if(currentYear - person.year >= 19) {
 //     return true;
