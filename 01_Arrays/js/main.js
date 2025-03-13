@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 // ============================================================================
 // Creëer een nieuwe array die alle getallen uit origineel bevat
 // die groter zijn dan 3.
@@ -20,16 +20,16 @@ console.log(onevenMaalTwee);
 
 // ============================================================================
 // Creëer een nieuwe array met alle fruit in hoofdletters.
-const fruit = ['orange', 'pineapple', 'strawberry', 'blueberry', 'melon'];
+const fruit = ["orange", "pineapple", "strawberry", "blueberry", "melon"];
 const fruitCaps = undefined;
 console.log(fruitCaps);
 
 // ============================================================================
 // Bereken de gemiddelde leeftijd van users
 const users = [
-  { id: 1, firstname: 'Jan', lastname: 'Janssens', age: 25 },
-  { id: 2, firstname: 'Eva', lastname: 'De Smet', age: 30 },
-  { id: 3, firstname: 'Pieter', lastname: 'Martens', age: 29 }
+  { id: 1, firstname: "Jan", lastname: "Janssens", age: 25 },
+  { id: 2, firstname: "Eva", lastname: "De Smet", age: 30 },
+  { id: 3, firstname: "Pieter", lastname: "Martens", age: 29 },
 ];
 
 const averageAge = undefined;
@@ -53,11 +53,11 @@ console.log(filterRange([120, 5, -88, 26, 98, 100], 0, 100));
 // Je mag ervan uitgaan dat de invoerstring minstens 1 karakter bevat.
 const berekenAantalOvergangen = undefined;
 
-let plusMin = '-++++----++--+';
+let plusMin = "-++++----++--+";
 console.log(
   `Aantal overgangen in ${plusMin} = ${berekenAantalOvergangen(plusMin)}`
 );
-plusMin = '++';
+plusMin = "++";
 console.log(
   `Aantal overgangen in ${plusMin} = ${berekenAantalOvergangen(plusMin)}`
 );
@@ -79,10 +79,10 @@ console.log(
 // de afzonderlijke cijfers van een getal te bekomen
 const isNarcistisch = undefined;
 
-let getal = '548834';
-console.log(`${getal} is ${isNarcistisch(getal) ? '' : 'niet '}narcistisch.`);
-getal = '1234';
-console.log(`${getal} is ${isNarcistisch(getal) ? '' : 'niet '}narcistisch.`);
+let getal = "548834";
+console.log(`${getal} is ${isNarcistisch(getal) ? "" : "niet "}narcistisch.`);
+getal = "1234";
+console.log(`${getal} is ${isNarcistisch(getal) ? "" : "niet "}narcistisch.`);
 
 // ============================================================================
 // Schrijf een functie die controleert of een woord een permutatie is van
@@ -90,17 +90,17 @@ console.log(`${getal} is ${isNarcistisch(getal) ? '' : 'niet '}narcistisch.`);
 // voor SLAAPT en PLAATS retourneert de functie true
 const isPermutatie = undefined;
 
-let woord1 = 'slaapt',
-  woord2 = 'plaats';
+let woord1 = "slaapt",
+  woord2 = "plaats";
 console.log(
   `${woord1} en ${woord2} zijn ${
-    isPermutatie(woord1, woord2) ? '' : 'g'
+    isPermutatie(woord1, woord2) ? "" : "g"
   }een permutatie van elkaar.`
 );
-woord2 = 'plast';
+woord2 = "plast";
 console.log(
   `${woord1} en ${woord2} zijn ${
-    isPermutatie(woord1, woord2) ? '' : 'g'
+    isPermutatie(woord1, woord2) ? "" : "g"
   }een permutatie van elkaar.`
 );
 
@@ -108,36 +108,36 @@ console.log(
 // Sorteer de array animals op basis van gewicht: van lichter naar zwaarder
 const animals = [
   {
-    name: 'lion',
-    size: 'medium',
-    weight: 150
+    name: "lion",
+    size: "medium",
+    weight: 150,
   },
   {
-    name: 'dog',
-    size: 'small',
-    weight: 10
+    name: "dog",
+    size: "small",
+    weight: 10,
   },
   {
-    name: 'elephant',
-    size: 'big',
-    weight: 5000
+    name: "elephant",
+    size: "big",
+    weight: 5000,
   },
   {
-    name: 'cat',
-    size: 'small',
-    weight: 5
-  }
+    name: "cat",
+    size: "small",
+    weight: 5,
+  },
 ];
 
 console.log(animals);
 
 // ============================================================================
-// Sorteer de onderstaande array aflopend op het aantal zijden van de shape
+// Maak een array sortedShapes die de elementen uit onderstaande array aflopend op het aantal zijden van de shape bevat. De array shapes blijft ongewijzigd.
 let shapes = [
-  [5, 'Pentagon'],
-  [3, 'Triangle'],
-  [8, 'Octagon'],
-  [4, 'Rectangle']
+  [5, "Pentagon"],
+  [3, "Triangle"],
+  [8, "Octagon"],
+  [4, "Rectangle"],
 ];
 
-console.log(shapes);
+// console.log(sortedShapes);
