@@ -17,8 +17,8 @@ console.log('getallen plus 5', allesPlusVijf);
 
 // Creëer een nieuwe array waarbij de oneven getallen ongewijzigd blijven
 // en de even getallen vermenigvuldigd worden met 2.
-let onevenMaalTwee = undefined;
-console.log('oneven getallen maal 2', onevenMaalTwee);
+let evenMaalTwee = undefined;
+console.log('even getallen maal 2', evenMaalTwee);
 
 // ============================================================================
 // Creëer een nieuwe array met alle fruit in hoofdletters.
