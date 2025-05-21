@@ -3,27 +3,27 @@
 // Creëer een nieuwe array die alle getallen uit origineel bevat
 // die groter zijn dan 3.
 const origineel = [1, 2, 3, 4];
-let groterDan3 = undefined;
+const groterDan3 = origineel.filter(e=>e>3);
 console.log('groter dan 3', groterDan3);
 
 // Creëer een nieuwe array die alle even getallen uit origineel bevat
-let evenGetallen = undefined;
+let evenGetallen = origineel.filter(e=>e%2==0);
 console.log('even getallen', evenGetallen);
 
 // Creëer een nieuwe array die alle getallen uit origineel bevat
 // maar met 5 verhoogd.
-let allesPlusVijf = undefined;
+let allesPlusVijf = origineel.map(e=>e+5);
 console.log('getallen plus 5', allesPlusVijf);
 
 // Creëer een nieuwe array waarbij de oneven getallen ongewijzigd blijven
 // en de even getallen vermenigvuldigd worden met 2.
-let evenMaalTwee = undefined;
+let evenMaalTwee = origineel.map(e=>e%2==0 ? e*2:e);
 console.log('even getallen maal 2', evenMaalTwee);
 
 // ============================================================================
 // Creëer een nieuwe array met alle fruit in hoofdletters.
 const fruit = ['orange', 'pineapple', 'strawberry', 'blueberry', 'melon'];
-const fruitCaps = undefined;
+const fruitCaps = fruit.map(e=>e.toUpperCase());
 console.log('fruit in hoofdletters', fruitCaps);
 
 // ============================================================================
@@ -34,7 +34,7 @@ const users = [
   { id: 3, firstname: 'Pieter', lastname: 'Martens', age: 29 },
 ];
 
-const averageAge = undefined;
+const averageAge = users.reduce((acc,user)=>acc+user.age,0)/users.length; 
 console.log(`Average age of users = ${averageAge}`);
 
 // ============================================================================
@@ -43,7 +43,11 @@ console.log(`Average age of users = ${averageAge}`);
 // die enkel de getallen bevat die liggen tussen [start, stop]
 // De array van getallen, de start en stopwaarde zijn parameters van filterRange.
 // De oorspronkelijke array moet ongewijzigd blijven
-const filterRange = undefined;
+const filterRange = (array,start,stop)=>{
+  const nieuweArray=[...array];
+  nieuweArray.filter(e=>e>=start&&e<=stop)
+  return nieuweArray;
+};
 
 console.log(filterRange([120, 5, -88, 26, 98, 100], 0, 100));
 
@@ -53,7 +57,7 @@ console.log(filterRange([120, 5, -88, 26, 98, 100], 0, 100));
 // Schrijf een functie berekenAantalOvergangen met een string parameter
 // die berekent hoeveel maal een overgang optreedt van + naar − of omgekeerd.
 // Je mag ervan uitgaan dat de invoerstring minstens 1 karakter bevat.
-const berekenAantalOvergangen = undefined;
+const berekenAantalOvergangen = str => [...str].filter((c, i, arr) => i > 0 && c !== arr[i - 1]).length;
 
 let plusMin = '-++++----++--+';
 console.log(`Aantal overgangen in ${plusMin} = ${berekenAantalOvergangen(plusMin)}`);
@@ -75,7 +79,15 @@ console.log(`Aantal overgangen in ${plusMin} = ${berekenAantalOvergangen(plusMin
 // die aangeeft of getal al dan niet narcistisch is
 // Maak gebruik van getal.split('') om een array met
 // de afzonderlijke cijfers van een getal te bekomen
-const isNarcistisch = undefined;
+const isNarcistisch = (getal)=>{
+  const getallen=[...getal];
+  let totaal=0;
+  getallen.forEach(getal => {
+    totaal+=Math.pow(getal,getallen.length)
+  });
+  return totaal;
+
+};
 
 let getal = '548834';
 console.log(`${getal} is ${isNarcistisch(getal) ? '' : 'niet '}narcistisch.`);
@@ -86,7 +98,15 @@ console.log(`${getal} is ${isNarcistisch(getal) ? '' : 'niet '}narcistisch.`);
 // Schrijf een functie die controleert of een woord een permutatie is van
 // een ander woord (i.e. ze bevatten dezelfde letters), bijvoorbeeld:
 // voor SLAAPT en PLAATS retourneert de functie true
-const isPermutatie = undefined;
+const isPermutatie = (woord1,woord2)=>{
+  const array1=[...woord1].sort();
+  const array2=[...woord2].sort();
+
+  if(array1.join('')===array2.join(''))
+    return true;
+  else
+    return false;
+};
 
 let woord1 = 'slaapt',
   woord2 = 'plaats';
@@ -123,6 +143,8 @@ const animals = [
   },
 ];
 
+animals.sort((a,b)=>a.weight-b.weight);
+
 console.log(animals);
 
 // ============================================================================
@@ -134,4 +156,6 @@ let shapes = [
   [4, 'Rectangle'],
 ];
 
-// console.log(sortedShapes);
+const sortedShapes=shapes.sort((a,b)=>b[0]-a[0])
+
+console.log(sortedShapes);
